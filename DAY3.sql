@@ -247,6 +247,35 @@ select * from personel WHERE isim like '%t';
 -- Isminin 2. harfi e olan personeli listeleyiniz
 select * from personel WHERE isim like 'e%';
 
+-- 'a' ile başlayıp 'n' ile biten personel isimlerini listeleyiniz
+select isim from personel WHERE isim ~~* 'a%n'
+
+-- ikinci karakteri 'a' ve dördüncü karakteri 'u' olan personel isimlerini listeleyiniz
+select isim from personel where isim ilike '_a_u';
+
+-- İçinde 'e' ve 'r' bulunan personel isimlerini listeleyiniz
+select isim from personel where isim ilike '%e%' and isim like '%r%'
+									      ---- hem e hem r olması lazım
+select isim from personel where isim ilike '%e%' or isim like '%r%'										  
+										      -- hepsini alır
+-- 2. harfi e olup diğer harflerinde y olan personeli listeleyiniz
+select isim from personel where isim like '_e%y%' 
+
+-- a harfi olmayan personeli listeleyin
+select isim from personel where isim not like '%a%'
+
+-- a harfi olmayan personeli listeleyin
+select * from personel where isim ilike 'a_____a%'
+
+--Sondan ikinci karakteri 'r' olan "isim" değerlerini listeleyiniz.
+select * from personel where isim like '%r_'
+
+
+
+
+
+
+
 
 
 
