@@ -69,6 +69,12 @@ set musteri_isim=(SELECT irtibat_ismi from tedarikciler where firma_ismi='Apple'
 where urun_isim='Laptop'
 
 
+--tedarikciler tablosundaki irtibat_ismi Kim Yon olan müşterinin firma_ismi, 
+--urun_id 1003 olan musteri_ismi ile değişecek
+update tedarikciler
+set firma_ismi=(Select musteri_isim from urunler where urun_id=1003 )
+where irtibat_ismi='Kim Yon'
+
 
 
 

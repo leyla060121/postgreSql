@@ -43,9 +43,8 @@ where isyeri in(select marka_isim from markalar where marka_id>101 )
 select marka_id, calisan_sayisi from markalar
 where marka_isim in(select isyeri from calisanlar2 where sehir='Ankara')
 
-
-
-
-
+-- isim'i Veli Yılmaz olan'ın isyeri'ndeki calisan_sayilarini listeleyiniz
+select calisan_sayisi from markalar
+where marka_isim in (select isyeri from calisanlar2 where isim='Veli Yilmaz')
 
 

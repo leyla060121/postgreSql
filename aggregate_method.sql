@@ -56,6 +56,8 @@ select max(maas) as enYuksekUcuncuMaas from calisanlar2
 where maas<(select max(maas)from calisanlar2 where maas<(select max (maas) from calisanlar2))
 
 --en dusuk 3.maas değerini bulunuz HOMEWORK
+select min(maas) as enDusukUcuncuMaas from calisanlar2
+where maas>(select min(maas)from calisanlar2 where maas>(select min(maas)from calisanlar2))
 
 
 

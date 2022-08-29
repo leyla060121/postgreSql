@@ -40,7 +40,8 @@ select urun_id, musteri_isim from mart --mart tablosunun urun_id, musteri_isim'n
 where exists(SELECT urun_id from nisan where mart.urun_id=nisan.urun_id) 
 --mart.urun_id=nisan.urun_id--->  bu martin urun_id'si ile nisanın urun_id'ni eşitle demektir
 
--- her iki ayda birden satılan
+--Her iki ayda birden satılan ürünlerin URUN_ISIM'lerini ve bu ürünleri
+--NİSAN ayında satın alan MUSTERI_ISIM'lerini listeleyen bir sorgu yazınız.
 select urun_isim, musteri_isim from nisan
 where exists (SELECT urun_isim from mart where mart.urun_isim=nisan.urun_isim)
 
